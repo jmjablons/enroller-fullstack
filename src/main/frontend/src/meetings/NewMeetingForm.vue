@@ -17,7 +17,7 @@
     export default {
         data() {
             return {
-                newMeeting: {participants: []},
+                newMeeting: {author: [], participants: []},
                 adding: false,
                 error: false
             };
@@ -27,7 +27,7 @@
                 this.error = false;
                 if (this.newMeeting.name) {
                     this.$emit('added', this.newMeeting);
-                    this.newMeeting = {participants: []};
+                    this.newMeeting = {author: [], participants: []};
                     this.adding = false;
                 } else {
                     this.error = true;
