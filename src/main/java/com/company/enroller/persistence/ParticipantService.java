@@ -20,7 +20,8 @@ public class ParticipantService {
         connector = DatabaseConnector.getInstance();
     }
 
-    public Collection<Participant> getAll() {
+    @SuppressWarnings("unchecked")
+	public Collection<Participant> getAll() {
         return connector.getSession().createCriteria(Participant.class).list();
     }
 

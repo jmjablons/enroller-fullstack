@@ -17,8 +17,19 @@ public class Meeting {
 
     @Column
     private String title;
-
+    
     @Column
+    private Participant author;
+
+	public Participant getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Participant author) {
+		this.author = author;
+	}
+
+	@Column
     private String description;
 
     @Column

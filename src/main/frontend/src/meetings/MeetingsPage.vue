@@ -31,6 +31,7 @@
         },
         methods: {
             addNewMeeting(meeting) {
+                meeting.author.push(this.username);
                 this.meetings.push(meeting);
             },
             addMeetingParticipant(meeting) {
